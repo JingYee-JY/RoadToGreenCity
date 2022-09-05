@@ -170,7 +170,7 @@ function updateCountDown(){
               <img src="./img/black.png">
               <p>RESTART</p>`
             restart.style.color = "black"
-            time = 30
+            time = 60
             timerCount.innerHTML = `${time}s`;
             return
         }
