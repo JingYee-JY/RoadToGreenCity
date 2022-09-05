@@ -166,8 +166,6 @@ function updateCountDown(){
               <img src="./img/black.png">
               <p>RESTART</p>`
             restart.style.color = "black"
-            time = 60
-            timerCount.innerHTML = `${time}s`;
             return
         }
         time--;
@@ -205,9 +203,7 @@ nextButton.addEventListener("click", () => {
         final.style.backgroundColor = "#60A478"
         icon.innerHTML = `
         <img src="./img/awesome.png">
-        <p>Awesome</p>`
-        time = 30
-        timerCount.innerHTML = `${time}s`;
+        <p>Awesome</p>`;
     }
     if(winCount == 3 || winCount == 6){
         initializer();
@@ -216,7 +212,9 @@ nextButton.addEventListener("click", () => {
 
 restart.addEventListener("click", () => {
   final.classList.add("hide")
-  timer = 60
+  time = 60
+  winCount = 0;
+  timerCount.innerHTML = `${time}s`;
   startGame = true
   initializer();
 })
