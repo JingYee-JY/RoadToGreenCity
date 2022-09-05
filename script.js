@@ -150,12 +150,15 @@ function opening(){
 }
 
 function closing(){
-
   cards.forEach((card) => {
     card.classList.remove("flipped");
+  })
+  let delay = setTimeout(() => {
     startGame = true
     flipping = false
-  })
+    firstCard = null
+    secondCard = null
+  }, 500);
 }
 
 function Show() {
@@ -219,12 +222,14 @@ nextButton.addEventListener("click", () => {
     if (winCount == 6) {
       startGame = false
         final.classList.remove("hide")
+        body.style.backgroundColor = "#60A478"
         final.style.backgroundColor = "#60A478"
         icon.innerHTML = `
         <img src="./img/awesome.png">
         <p>Awesome</p>`;
     }
     if(winCount == 3){
+      flipping = false
         initializer();
     }
 })
@@ -235,6 +240,7 @@ restart.addEventListener("click", () => {
   winCount = 0;
   timerCount.innerHTML = `${time}s`;
   startGame = true
+  body.style.backgroundColor = "#E0F0C0"
   initializer();
 })
 
