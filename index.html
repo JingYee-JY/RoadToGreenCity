@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" 
+    href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="style.css">
+    <title>Road To Green City</title>
+</head>
+<body>
+    <div class="start">
+        <div class="game-title">
+            <img class="title" src="./img/title.png">
+        </div>
+        <img class="preview" src="./img/preview.png">
+        <button class="startButton">
+            <p class>START GAME</p>
+			<h1 class="arrowHead">&#8594</h1> 
+        </button>
+    </div>
+    <div class="howToPlay hide">
+        <h1>HOW TO PLAY<hr></h1>
+            <div class="instruction">
+            <p>A game that will improve your memory and brain power.</p>
+            <p>flip the cover up card.</p>
+            <div class="image">
+                <div class="cover">
+                    <img src="./img/back.png">
+                </div>
+                <div class="cover">
+                    <img src="./img/back.png">
+                </div>
+            </div>
+              <p>
+                if the picture matched, will have a message pop up 
+                for the winned tips.</p>
+                <div class="example">
+                    <div class="match">
+                        <div class="smaller">
+                            <img src="./img/bicycle.png">
+                        </div>
+                        <div class="smaller">
+                            <img src="./img/back.png">
+                        </div>
+                        <div class="smaller">
+                            <img src="./img/back.png">
+                        </div>
+                        <div class="smaller">
+                            <img src="./img/bicycle.png">
+                        </div>
+                    </div>
+                    <div class="tip">
+                        <img src="./img/bicycle.png">
+                        <p class="name">Bicycle</p>
+                        <p>Biking a mile is 3-5 times more energy-effient than walking,
+                            and for every 3 miles not driven, 2.6pounds of cardon dioxide 
+                            is kept out of the atmosphere.
+                        </p>
+                        <button class="show">Next &#8594</button>
+                    </div>
+                </div>
+                <p>flip all the cover up card until you win. Happy gaming.</p>
+            </div>
+            <button class="startGame"> 
+                <p class>START</p>
+				<h1 class="arrowHead">&#8594</h1> 
+            </button>
+            
+    </div>
+    <div class="game hide">
+        <div class="con">
+            <div class="top">
+                <div class="time">30s</div>
+            </div>
+            <p>Match the same picture</p>
+        </div>
+        <div class="game-container"></div>
+    </div>
+    <div class="popUp hide">
+        <div class="pop">
+            <div class="information"></div>
+            <button class="nextButton">
+                <p class>Next</p>
+                <h1 class="arrowHead">&#8594</h1> 
+            </button>
+        </div>
+    </div>
+    <div class="final hide">
+        <div class="final-title">
+            <img class="title-final" src="./img/title.png">
+        </div>
+        <div class="icon"></div>
+        <div class="text">
+            <p>Did you know</p>
+            <p><strong>80%</strong></p>
+            <p>of buildings in Singapore to be green by 2030</p>
+        </div>
+        <a class="More" href= "https://www.globalgoals.org/goals/11-sustainable-cities-and-communities/">
+            <p class="words">Find out how you can save</p>
+            <h1 class="arrowHead">&#8594</h1> </a>
+        <button class="restart">
+                <img src="./img/white.png">
+                <p>RESTART</p>
+            </button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
