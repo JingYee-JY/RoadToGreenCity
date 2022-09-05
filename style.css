@@ -247,7 +247,7 @@ hr{
     display: grid;
     align-self: center;
     gap: 0.5%;
-    grid-template-columns:repeat(2, calc(100% - 190px)) !important;
+    grid-template-columns:repeat(2, calc(100% - 190px));
     -ms-grid-rows:calc(100% - 20px);
     justify-content: center;
     grid-template-rows:repeat(3, calc(100% - 20px));
@@ -548,7 +548,12 @@ img.btn{
         margin: 0 auto;
     }
     .con p{
+        margin-top: 0%;
         margin-bottom: 0%;
+    }
+    .game-container{
+        grid-template-columns:repeat(2, calc(100% - 220px));
+        grid-template-rows:repeat(3, calc(100% - 25px));
     }
     .con{
         margin-top: 1%;
@@ -568,5 +573,5 @@ img.btn{
     }
     .final-title{
         margin-top: 0%;
-      }
+    }
   }

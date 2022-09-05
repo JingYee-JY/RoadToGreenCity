@@ -216,7 +216,7 @@ nextButton.addEventListener("click", () => {
     winCount += 1;
     startGame = true
     //check if winCount ==half of cardValues
-    if (winCount == 9) {
+    if (winCount == 6) {
       startGame = false
         final.classList.remove("hide")
         final.style.backgroundColor = "#60A478"
@@ -224,7 +224,7 @@ nextButton.addEventListener("click", () => {
         <img src="./img/awesome.png">
         <p>Awesome</p>`;
     }
-    if(winCount == 3 || winCount == 6){
+    if(winCount == 3){
         initializer();
     }
 })
