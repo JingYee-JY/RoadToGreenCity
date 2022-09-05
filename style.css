@@ -246,11 +246,11 @@ hr{
     display: -ms-grid;
     display: grid;
     align-self: center;
-    gap: 1%;
-    row-gap: 1%;
-    -ms-grid-rows:calc(100% - 30px);
+    gap: 0.5%;
+    grid-template-columns:repeat(2, calc(100% - 190px)) !important;
+    -ms-grid-rows:calc(100% - 20px);
     justify-content: center;
-    grid-template-rows:repeat(3, calc(100% - 30px));
+    grid-template-rows:repeat(3, calc(100% - 20px));
   }
   
   .card-container {
@@ -546,10 +546,6 @@ img.btn{
     .start, .howToPlay,.game,.final{
         max-width: 400px;
         margin: 0 auto;
-    }
-    .game-container{
-        gap: 0.5%;
-        grid-template-columns:repeat(2, calc(100% - 230px)) !important;
     }
     .con p{
         margin-bottom: 0%;

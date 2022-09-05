@@ -85,10 +85,6 @@ const matrixGenerator = (cardValues, size = 2) => {
        </div>
        `;
     }
-
-    let girdWidth = "calc(100% - 200px)"
-    //Grid
-    gameContainer.style.gridTemplateColumns = `repeat(${size},${girdWidth})`;
   
     //Cards
     cards = document.querySelectorAll(".card-container");
