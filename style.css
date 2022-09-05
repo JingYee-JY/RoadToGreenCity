@@ -557,7 +557,13 @@ img.btn{
       left: 0;
       right: 0;
     }
-    .startButton, .startButton{
+    .pop{
+        max-width: 350px;
+    }
+    .pop img{
+        max-width: 60px;
+    }
+    .startButton, .startButton .nextButton{
         max-width: 250px;
     }
     .final-title{
