@@ -135,7 +135,28 @@ const matrixGenerator = (cardValues, size = 2) => {
         }
       });
     });
+    opening()
   };
+
+function opening(){
+  let Opendelay = setTimeout(() => {
+    cards.forEach((card) => {
+      card.classList.add("flipped"); 
+    })
+  }, 200);
+  let Closedelay = setTimeout(() => {
+    closing()
+  }, 2000);
+}
+
+function closing(){
+
+  cards.forEach((card) => {
+    card.classList.remove("flipped");
+    startGame = true
+    flipping = false
+  })
+}
 
 function Show() {
     let current = firstCardValue;
@@ -186,8 +207,6 @@ startGameButton.addEventListener("click", () => {
     body.style.backgroundColor = "#E0F0C0"
     winCount = 0
     time = 60
-    flipping =false
-    startGame = true
     initializer();
 })
 
