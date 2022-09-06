@@ -28,15 +28,15 @@ let startGame
 
 //Items array
 const items = [
-    { value: 0 ,name: "reusable bag", image: "./img/bag.png" },
-    { value: 1 ,name: "solar panels", image: "./img/solar.png" },
-    { value: 2 ,name: "growing food", image: "./img/food.png" },
-    { value: 3 ,name: "bicycle", image: "./img/bicycle.png" },
-    { value: 4 ,name: "trees", image: "./img/trees.png" },
-    { value: 5 ,name: "green policy", image: "./img/policy.png" },
-    { value: 6 ,name: "electric car", image: "./img/charge.png" },
-    { value: 7 ,name: "recycle bin", image: "./img/bin.png" },
-    { value: 8 ,name: "park", image: "./img/park.png" }
+    { value: 0 ,name: "Reusable Bag", image: "./img/bag.png" },
+    { value: 1 ,name: "Solar Panels", image: "./img/solar.png" },
+    { value: 2 ,name: "Growing Food", image: "./img/food.png" },
+    { value: 3 ,name: "Bicycle", image: "./img/bicycle.png" },
+    { value: 4 ,name: "Trees", image: "./img/trees.png" },
+    { value: 5 ,name: "Green Policy", image: "./img/policy.png" },
+    { value: 6 ,name: "Electric Car", image: "./img/charge.png" },
+    { value: 7 ,name: "Recycle Bin", image: "./img/bin.png" },
+    { value: 8 ,name: "Park", image: "./img/park.png" }
   ];
 
 const details = [
