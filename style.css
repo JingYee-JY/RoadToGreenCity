@@ -14,8 +14,6 @@
 body {
     margin: 0;
     padding: 0;
-    width: 100vmin;
-    height: 100vh;
     text-align: center;
     font-family: 'noto';
     background-color: #60A478;
@@ -579,6 +577,66 @@ img.btn{
     align-items: center;
     }
 }
+
+  /*ipad*/
+  @media screen and (min-width: 768px) and (max-width: 1199px){
+    body{
+      width: 100%;
+    }
+    .start, .howToPlay, .game,.final{
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    .start,.game,.final{
+      left: 0;
+      right: 0;
+    }
+    .con p{
+        font-size: 30px;
+        margin-bottom: 0%;
+    }
+    .howToPlay, .final{
+        justify-content: center;
+    }
+    .game{
+        justify-content: center;
+    }
+    .preview{
+        margin-top: 20%;
+        margin-left: -40%;
+        width: 200%;
+    }
+    .words{
+      width: 90%;
+    }
+    .instruction{
+        max-height: 80vh;
+    }
+    .instruction::-webkit-scrollbar {
+        width: 0px;
+    }
+    .instruction::-webkit-scrollbar-track {
+        box-shadow: 0px;
+    }
+    .instruction::-webkit-scrollbar-thumb {
+        background-color: none;
+        outline: 0px;
+    }
+    .startButton, .startGame, .nextButton{
+        max-width: 250px;
+    }
+    .pop{
+        max-width: 550px;
+        max-height: 400px;
+    }
+    .game-container{
+        width: 100%;
+        height: 60vh;
+        grid-template-columns: repeat(2, 50%);
+        grid-template-rows: repeat(3, 35%);
+    }
+}
+
 
 /*desktop*/
 @media screen and (min-width:1200px){
