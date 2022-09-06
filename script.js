@@ -186,6 +186,10 @@ function updateCountDown(){
             icon.innerHTML = `
               <img src="./img/timeout.png">
               <p>Timeout</p>`
+              more.innerHTML = `
+              <p class="Moretext">Find out how
+              <br> we do</p>
+              <img src="./img/arrow.png" class="arrowHead">`
             restart.innerHTML =`
               <img src="./img/black.png">
               <p>RESTART</p>`
@@ -226,7 +230,11 @@ nextButton.addEventListener("click", () => {
         final.style.backgroundColor = "#60A478"
         icon.innerHTML = `
         <img src="./img/awesome.png">
-        <p>Awesome</p>`;
+        <p>Awesome!</p>`;
+        more.innerHTML = `
+        <p class="Moretext">Find out how
+        <br> we do</p>
+        <img src="./img/arrow-green.png" class="arrowHead">`
     }
     if(winCount == 3){
       flipping = false
