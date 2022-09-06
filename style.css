@@ -498,11 +498,6 @@ img.btn{
 	font-weight: 600;
 }
 
-.arrowHead{
-	font-size: 30px;
-	margin-right: 2.55%;
-}
-
 .final-title{
 	margin-top: 10%;
     align-self: center;
@@ -631,6 +626,13 @@ img.btn{
     }
     .startButton, .startGame, .nextButton{
         max-width: 250px;
+    }
+    .nextButton{
+        margin-top: 2.5%;
+        padding: 2.5% 2.5%;
+    }
+    .nextButton img{
+        max-width: 30px;
     }
     .final-title{
         margin-top: 0%;
