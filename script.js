@@ -28,27 +28,27 @@ let startGame
 
 //Items array
 const items = [
-    { value: 0 ,name: "Reusable Bag", image: "./img/bag.png" },
+    { value: 0 ,name: "Eco-Bag", image: "./img/bag.png" },
     { value: 1 ,name: "Solar Panels", image: "./img/solar.png" },
-    { value: 2 ,name: "Growing Food", image: "./img/food.png" },
+    { value: 2 ,name: "Food Garden", image: "./img/food.png" },
     { value: 3 ,name: "Bicycle", image: "./img/bicycle.png" },
     { value: 4 ,name: "Trees", image: "./img/trees.png" },
     { value: 5 ,name: "Green Policy", image: "./img/policy.png" },
-    { value: 6 ,name: "Electric Car", image: "./img/charge.png" },
-    { value: 7 ,name: "Recycle Bin", image: "./img/bin.png" },
+    { value: 6 ,name: "Electric Car Charging Station", image: "./img/charge.png" },
+    { value: 7 ,name: "Recycling Bin", image: "./img/bin.png" },
     { value: 8 ,name: "Park", image: "./img/park.png" }
   ];
 
 const details = [
-    { info: "Reusable bag can be used more often which reduce the use of plastic bags. The amount of disposed bags that end up in landfill or oceans also decrease."},
-    { info: "It is a renewable energy source provides more than enough energy to meet the whole world's energy needs, and it won't run out anytime soon."},
-    { info: "Growing own vegetables reduce carbon emissions. No plastic packaging is required when you harvest vegetables, which also reduces fossil fuel inputs."},
-    { info: "Biking a mile is 3-5 times more energy-effient than walking, and for every 3 miles not driven, 2.6pounds of cardon dioxide is kept out of the atmosphere."},
-    { info: "Trees improve both air and water quality by absorbing pollutants, intercepting particulates, releasing oxygen, reducing ozone levels and reducing soil erosion."},
-    { info: "Green Policy is a company's statement about their commitment to sustainability and environmental management and it is a high priority for them."},
-    { info: "Electric car produces zero tailpipe emissions, dramatically lowering smog and greenhouse gas emissions. Which means cleaner air and better health."},
-    { info: "When we recycle, we extract less raw materials, which conserves many of our precious and finite natural resources. Protecting our resources!"},
-    { info: "Park preserve natural resources and promote quality of life for the people around it. It uses native plants and geographic features while also enjoyable."}
+    { info: "Ecobags eliminate the need for single-use plastic bags and recycle materials that would be for waste."},
+    { info: "Renewable energy minimises the impacts of carbon pollution by creating cleaner and cheaper forms of air, electricity and water."},
+    { info: "Food gardens help to reduce carbon emission, builds community resilience and food security relying less on mass produced foods, and increases support for local ecosystems."},
+    { info: "Cycling largely reduces carbon emissions. Just cycling once a week saves up to 3.2kg of CO2 - equivalent to emissions from driving a car for 10km!"},
+    { info: "Trees improve air and water quality, lower temperature levels, relieves stress on stormwater drainage systems and reduces carbon emissions."},
+    { info: "Green policies ensure that governments and businesses are responsible for authorising and adhering to laws addressing climate challenge with appropriate funding and programs."},
+    { info: "Electric vehicles and chargers help to improve air quality with minimal carbon emissions during production and usage."},
+    { info: "Recycling reduces the amount of waste produced, prevents pollution and saves energy by conserving and reusing resources"},
+    { info: "Parks and plants help to reduce carbon emission, regulate temperature levels, relieve pressure on ageing stormwater systems and contribute to open green spaces."}
 ]
 
 //Pick random objects from the items array
