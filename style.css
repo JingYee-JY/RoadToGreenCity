@@ -1,3 +1,16 @@
+.instruction::-webkit-scrollbar {
+    width: 5px;
+}
+   
+.instruction::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+   
+.instruction::-webkit-scrollbar-thumb {
+    background-color: #747474;
+    outline: 1px solid #747474;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -108,7 +121,9 @@ body {
 }
 
 .instruction{
-    width: 100%;
+    border: 2px solid #747474;
+    width: calc(100% - 40px);
+    margin: 0 auto;
     padding:0 20px;
     box-sizing: border-box;
     font-size: 19px;
@@ -117,8 +132,9 @@ body {
     overflow-y: scroll;
 }
 h1{
-    font-size: 30px;
-    margin-top: 10%;
+    font-size: 26px;
+    color: #474747;
+    margin-top: 30px;
 }
   
 .image{
@@ -184,8 +200,8 @@ h1{
 
 hr{
     width: 90%;
-    background-color: black;
-    border: 2px solid black;
+    background-color: #474747;
+    border: 2px solid #474747;
     margin-bottom: 0%;
 }
 
@@ -595,6 +611,9 @@ img.btn{
       left: 0;
       right: 0;
     }
+    .instruction{
+        max-height: 60vh;
+    }
     .icon{
         height: 95px;
     }
@@ -610,7 +629,7 @@ img.btn{
     .pop img{
         max-width: 60px;
     }
-    .startButton, .startButton .nextButton{
+    .startButton, .startGame, .nextButton{
         max-width: 250px;
     }
     .final-title{
