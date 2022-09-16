@@ -5,7 +5,7 @@ const howToPlay = document.querySelector(".howToPlay")
 const game = document.querySelector(".game")
 const startGameButton = document.querySelector(".startGame")
 const gameContainer = document.querySelector(".game-container");
-const nextButton = document.querySelector(".nextButton");
+const closeButton = document.querySelector(".close");
 const popUp = document.querySelector(".popUp");
 const information = document.querySelector(".information");
 const timerCount = document.querySelector(".time");
@@ -25,6 +25,8 @@ let flipping;
 let time = 0;
 let winCount
 let startGame
+
+const pop = []
 
 //Items array
 const items = [
@@ -110,11 +112,16 @@ const matrixGenerator = (cardValues, size = 2) => {
               //if both cards match add matched class so these cards would beignored next time
               firstCard.classList.add("matched");
               secondCard.classList.add("matched");
-              startGame = false
-              let delay = setTimeout(() => {
-                Show()
-                firstCard = false;
-              }, 400);
+              winCount += 1
+              firstCard = false;
+              secondCard = false;
+              pop.push(firstCardValue);
+              if(winCount == 3 || winCount == 6){
+                let delay = setTimeout(() => {
+                  startGame = false
+                  Show()
+                }, 500);
+              }
               //set firstCard to false since next card would be first now
             } else {
               //if the cards dont match
@@ -162,12 +169,25 @@ function closing(){
 }
 
 function Show() {
-    let current = firstCardValue;
-    console.log(current)
+    let current1 = pop[0];
+    let current2 = pop[1];
+    let current3 = pop[2];
+    console.log(current1)
     information.innerHTML =`
-    <img src="${items[current].image}">
-    <h1>${items[current].name}</h1>
-    <p>${details[current].info}</p>`
+    <div class="detail">
+    <img src="${items[current1].image}">
+    <p>${details[current1].info}</p>
+    </div>
+    <hr>
+    <div class="detail">
+    <img src="${items[current2].image}">
+    <p>${details[current2].info}</p>
+    </div>
+    <hr>
+    <div class="detail">
+    <img src="${items[current3].image}">
+    <p>${details[current3].info}</p>
+    </div>`
     popUp.classList.remove("hide")
 }
 
@@ -217,11 +237,13 @@ startGameButton.addEventListener("click", () => {
     initializer();
 })
 
-nextButton.addEventListener("click", () => {
+closeButton.addEventListener("click", () => {
     popUp.classList.add("hide")
-    //winCount increment as user found a correct match
-    winCount += 1;
     startGame = true
+    for(let i = 0; i < 3; i++){
+      pop.pop()
+    }
+    console.log(pop)
     //check if winCount ==half of cardValues
     if (winCount == 6) {
       startGame = false
@@ -256,6 +278,5 @@ restart.addEventListener("click", () => {
     //Initialize values and func calls
 const initializer = () => {
     let cardValues = generateRandom();
-    console.log(cardValues);
     matrixGenerator(cardValues);
 };

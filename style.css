@@ -23,6 +23,10 @@ body {
     position: fixed;
 }
 
+button{
+    cursor: pointer;
+}
+
 *{
     font-family: 'Montserrat', sans-serif;
 }
@@ -59,7 +63,7 @@ body {
 .game-title{
     margin-top: 10%;
     align-self: center;
-    width: 40%;
+    width: 50%;
 }
 
 .title{
@@ -68,13 +72,15 @@ body {
 }
 
 .preview{
-    width: 99%;
-    margin-top: 5%;
-    margin-bottom: 5%;
-    padding: 1%;
+    width: 80%;
+	margin: 0 auto;
+    margin-top: 15%;
+    margin-bottom: 15%;
+    padding:0;
+	
   }
   
-.startButton, .startGame, .nextButton{
+.startButton, .startGame{
     width: 100%;
     position: relative;
     align-self: center;
@@ -90,15 +96,12 @@ body {
     font-weight: 700;
     font-size: 25px;
 }
-.nextButton{
-    margin-bottom: 0%;
-}
 
 .startGame {
     margin-top: 40px;
 }
 
-.startButton p, .startGame p, .nextButton p {
+.startButton p, .startGame p{
     margin: 3%;
     margin-right: 6%;
 }
@@ -124,15 +127,15 @@ body {
 }
 
 .instruction{
-    border: 2px solid #747474;
+    /*border: 2px solid #747474;*/
     width: calc(100% - 40px);
     margin: 0 auto;
     padding:0 20px;
     box-sizing: border-box;
     font-size: 19px;
     text-align: left;
-    max-height: 50vh;
-    overflow-y: scroll;
+    /*max-height: 50vh;
+    overflow-y: scroll;*/
 }
 h1{
     font-size: 26px;
@@ -152,13 +155,13 @@ h1{
     flex-wrap: wrap;
     margin: 5px;
 	padding: 10px;
-    margin-top: 10%;
+    margin-top: 10px;
     z-index: 3;
     font-weight: 900;
 }
 
 .con p{
-    margin: 5% auto;
+    margin: 40px auto 0px auto;
     font-size: 20px;
 }
 
@@ -166,11 +169,12 @@ h1{
 	position: relative;
 	display: flex;
 	background-color: #2A2C5C;
-	border-radius: 20px;
+	border-radius: 10px;
 	font-size: 20px;
 	width: 100%;
 	height: 30px !important;
 	padding: 2.5%;
+	margin-bottom: 15px;
 }
 
 .cover{
@@ -201,7 +205,7 @@ h1{
     align-items: center;
 }
 
-hr{
+.howToPlay hr{
     width: 90%;
     background-color: #474747;
     border: 2px solid #474747;
@@ -211,6 +215,50 @@ hr{
 .example{
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.detail{
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(2,40% 60%);
+}
+.detail img{
+    margin-top: 2.5%;
+    height: auto;
+    width: 100%;
+}
+.detail p {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin: 0%;
+    font-size: 13px;
+    text-align: center;
+}
+
+.information hr{
+    position: relative;
+    width: 95%;
+    background-color: #474747;
+    border: 2px solid #474747;
+    margin: 20px auto;
+}
+
+.close{
+    position: absolute;
+    top: 8%;
+    right: 8%;
+    z-index: 3;
+    font-size: 30px;
+    padding: 0% 2.7%;
+    background-color: red;
+    font-weight: 900;
+    color: white;
+    border: 0px;
+    border-radius: 20px;
 }
 
 .match{
@@ -218,7 +266,6 @@ hr{
     display: grid;
     grid-template-columns: repeat(2,47%);
     grid-template-rows: repeat(2,45%);
-    align-content: center;
     gap: 2.5%;
     margin: 0;
 }
@@ -241,7 +288,7 @@ hr{
 }
 .tip p{
     color: black;
-    font-size: 9px;
+    font-size: 5.5px;
     margin: 0;
 }
 
@@ -279,7 +326,7 @@ hr{
 }
 
 .game-container {
-    width: 98%;
+    width: calc(100% - 30px);
     height: 100%;
     margin: 0;
     display: -ms-grid;
@@ -423,7 +470,7 @@ img.btn{
 .pop{
     background-color: white;
     width: 90%;
-    height: 50%;
+    height: 90%;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -432,30 +479,12 @@ img.btn{
 }
 
 .information{
-    width: 80%;
+    width: 90%;
     height: 70%;
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.information img{
-    margin-top: 2.5%;
-    width: 30%;
-}
-.information h1{
-    font-weight: 900;
-    font-size: 20px;
-    margin: 2.5% auto;
-    margin: 0%;
-}
-.information p {
-    width: 300px;
-    height: 200px;
-    display: flex;
-    align-items: center;
-    margin: 0%;
-    text-align: center;
+    margin-top: 70px;
 }
 
 .More{
@@ -467,7 +496,7 @@ img.btn{
     align-items: center;
     border-radius: 7px;
 	color: #60A478;
-    padding: 2.5%;
+    padding: 15px;
     text-decoration: none;
 }
 
@@ -498,21 +527,25 @@ img.btn{
 }
 
 .restart{
-	width: 70%;
+	width: 100%;
 	position: relative;
 	background-color: transparent;
 	border: 0px;
 	color: white;
 	font-size: 20px;
 	margin: 0% auto;
+    margin-top: 10px;
 	font-weight: 600;
+	display: flex;
+	justify-content: center;
+	align-items: center; 
 }
 
 .final-title{
 	margin-top: 10%;
     align-self: center;
     width: 150px;
-	margin-bottom: 0%;
+	margin-bottom: 20px;
   }
 
   .title-final{
@@ -523,8 +556,8 @@ img.btn{
   }
 
   .icon{
-    width: 200px;
-	height: 110px;
+    max-width: 200px;
+	/* height: 110px; */
 	margin-top: 10px;
     color: white;
   }
@@ -549,14 +582,14 @@ img.btn{
   strong{
 	margin: 0%;
 	color: white;
-	font-size: 50px;
-	font-weight: 900;
+	font-size: 40px;
+	font-weight: 700;
   }
 
   .text{
     background-color: #2A2C5C;
 	width: 80%;
-    height: 200px;
+    height: auto;
     margin-bottom: 5%;
     text-align: center;
     display: flex;
@@ -564,8 +597,8 @@ img.btn{
     justify-content: center;
     line-height: normal;
     border-radius: 10px;
-    font-size: 25px;
-    padding: 15px;
+    font-size: 18px;
+    padding: 20px;
   }
 
   .text p , .text h2{
@@ -576,17 +609,22 @@ img.btn{
   .restart img{
     position: absolute;
 	width: 5%;
-	top: 35%;
 	left: 25%;
   }
 
   
   /*mobile*/
 @media screen and (max-width: 767px){
-    .startButton, .startGame, .nextButton {
-    width: calc(100% - 80px);
-    justify-content: center;
-    align-items: center;
+    .startButton, .startGame{
+        width: calc(100% - 80px);
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media screen and (max-width: 375px){
+    .preview{
+        margin-top: 10%;
+    margin-bottom: 10%;
     }
 }
 
@@ -608,21 +646,27 @@ img.btn{
         margin-bottom: 0%;
     }
     .howToPlay, .final{
-        justify-content: center;
+        justify-content: flex-start;
     }
     .game{
-        justify-content: center;
+        justify-content: flex-start;
+        align-items: center;
     }
     .preview{
-        margin-top: 20%;
-        margin-left: -40%;
-        width: 200%;
+        margin-top: 10%;
+        margin-bottom: 10%;
+        margin-left: 0;
+        width: 100%;
+
+    }
+    .pop{
+        max-height: 1000px;
     }
     .words{
       width: 90%;
     }
     .instruction{
-        max-height: 80vh;
+        max-height: 65vh;
     }
     .instruction::-webkit-scrollbar {
         width: 0px;
@@ -634,18 +678,35 @@ img.btn{
         background-color: none;
         outline: 0px;
     }
-    .startButton, .startGame, .nextButton{
+    .startButton, .startGame{
         max-width: 250px;
     }
-    .pop{
-        max-width: 550px;
-        max-height: 400px;
+    .close{
+        position: relative;
+        top: 2%;
+        right: -43%;
+        padding: 1% 3%;
+        border-radius: 50px;
+        font-size: 40px;
+    }
+    .detail img{
+        max-width: 200px;
+    }
+    .detail p{
+        font-size: 25px;
     }
     .game-container{
-        width: 100%;
+        width: calc(100% - 40px);
         height: 60vh;
         grid-template-columns: repeat(2, 50%);
         grid-template-rows: repeat(3, 35%);
+    }
+    .final-title{
+        width: 200px;
+        margin-bottom: 40px;
+    }
+    .restart{
+        margin-top: 20px;
     }
 }
 
@@ -679,38 +740,50 @@ img.btn{
     .instruction{
         max-height: 60vh;
     }
-    .icon{
+    /* .icon{
         height: 95px;
-    }
+    } */
     .final-title img{
         padding-bottom: 2.5%;
     }
     .icon p{
         margin-bottom: 10px;
     }
+    .detail img{
+        max-width: 100px;
+    }
     .pop{
-        max-width: 350px;
+        max-width: 400px;
     }
-    .pop img{
-        max-width: 60px;
+    .close{
+        position: relative;
+        top: 2%;
+        right: -40%;
+        padding: 0.5% 3.5%;
+        border-radius: 50px;
+        font-size: 30px;
     }
-    .startButton, .startGame, .nextButton{
+    .information{
+        margin: 10px auto;
+    }
+    .startButton, .startGame{
         max-width: 250px;
     }
-    .nextButton{
-        margin-top: 2.5%;
-        padding: 2.5% 2.5%;
-    }
-    .nextButton img{
-        max-width: 30px;
-    }
     .final-title{
-        margin-top: 0%;
+        margin-top: 20px;
+        width: 200px;
+        margin-bottom: 40px;
     }
     .restart {
-        margin: 0px;
+        margin-top: 20px;
     }
     .restart p{
         margin: 15px;
+    }
+    .text{
+        font-size: 18px;
+    }
+    strong{
+        font-size: 36px;
     }
   }

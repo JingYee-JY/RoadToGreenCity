@@ -4,17 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" 
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;700&display=swap">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">    
+
+
     <title>Road To Green City</title>
 </head>
 <body>
     <div class="start">
-        <div class="game-title">
+        <div class="game-title" data-aos="fade-down">
             <img class="title" src="./img/title.png">
         </div>
-        <img class="preview" src="./img/preview.png">
+        <img class="preview" data-aos="fade-down" data-aos-duration="1500" src="./img/preview.png">
         <button class="startButton">
             <p class="words">START GAME <img src="./img/arrow.png" class="arrowHead"></p>
         </button>
@@ -22,8 +24,9 @@
     <div class="howToPlay hide">
         <h1>HOW TO PLAY<hr></h1>
             <div class="instruction">
-            <p>A game that will improve your memory and brain power.</p>
-            <p>flip the cover up card.</p>
+            <p>Improve your memory with this classic flip-card game! Flip the cards and match the pictures within the given time. And get more green tips for your daily life!</p>
+            <!--
+				<p>flip the cover up card.</p>
             <div class="image">
                 <div class="cover">
                     <img src="./img/back.png">
@@ -35,6 +38,7 @@
               <p>
                 if the picture matched, will have a message pop up 
                 for the winned tips.</p>
+-->
                 <div class="example">
                     <div class="match">
                         <div class="smaller">
@@ -50,17 +54,8 @@
                             <img src="./img/bicycle.png">
                         </div>
                     </div>
-                    <div class="tip">
-                        <img src="./img/bicycle.png">
-                        <p class="name">Bicycle</p>
-                        <p>Biking a mile is 3-5 times more energy-effient than walking,
-                            and for every 3 miles not driven, 2.6pounds of cardon dioxide 
-                            is kept out of the atmosphere.
-                        </p>
-                        <button class="show">Next &#8594</button>
-                    </div>
                 </div>
-                <p>flip all the cover up card until you win. Happy gaming.</p>
+               <!-- <p>flip all the cover up card until you win. Happy gaming.</p>-->
             </div>
             <button class="startGame"> 
                 <p class="words">START <img src="./img/arrow.png" class="arrowHead"></p>
@@ -72,16 +67,14 @@
             <div class="top">
                 <div class="time">60s</div>
             </div>
-            <p>Match the same picture</p>
+            <p>Flip the cards and match the pictures.</p>
         </div>
         <div class="game-container"></div>
     </div>
     <div class="popUp hide">
         <div class="pop">
+            <button class="close">&times</button>
             <div class="information"></div>
-            <button class="nextButton">
-                <p class="words">Next <img src="./img/arrow.png" class="arrowHead"></p>
-            </button>
         </div>
     </div>
     <div class="final hide">
@@ -90,19 +83,28 @@
         </div>
         <div class="icon"></div>
         <div class="text">
-            <p>Did you know</p>
+            <p>Did you know?</p>
             <p><strong>80%</strong></p>
-            <p>of buildings in Singapore to be green by 2030</p>
+            <p>of buildings in Singapore will be green by 2030</p>
         </div>
-        <a class="More" href= "https://www.globalgoals.org/goals/11-sustainable-cities-and-communities/">
-            <p class="Moretext">Find out how 
-                <br> we do <img src="./img/arrow.png" class="arrowHead"></p>
+        <a class="More" target="_blank" href= "https://www1.bca.gov.sg/buildsg/sustainability/green-building-masterplans">
+            <p class="Moretext">Find out about our 
+                <br> green building masterplans <img src="./img/arrow.png" class="arrowHead"></p>
         </a>
         <button class="restart">
                 <img src="./img/white.png">
-                <p>RESTART</p>
+                <p>PLAY AGAIN</p>
             </button>
     </div>
     <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/highlight.min.js"></script>
+    <script>
+        AOS.init({
+            easing: 'ease-out-back',
+            duration: 1000
+        });
+    </script>
 </body>
 </html>
